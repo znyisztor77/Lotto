@@ -50,23 +50,23 @@ namespace Lotto
 
         public static void minimumKivalasztasosRendezes(int[] tomb)
         {
-            int n = tomb.Length; //a tömb mérete
+            int n = tomb.Length; 
             int csere;
             int min;
 
-            for (int i=0;i<n-1;i++)
+            for (int i = 0; i < n; i++)
             {
                  min = i;
-                 for (int j=i+1;j<n;j++)
+                 for (int j = i+1; j < n; j++)
                  {
-                    if(tomb[i]>tomb[j])
+                    if(tomb[min] > tomb[j])
                     {
                         min = j;
                     }
                   }
-            csere = tomb[min];
-            tomb[min] = tomb[i];
-            tomb[i] = csere;
+            csere = tomb[i];
+            tomb[i] = tomb[min];
+            tomb[min] = csere;
 
             }
 
@@ -75,7 +75,7 @@ namespace Lotto
             { 
                 Console.Write(tomb[k] + ", ");
             }
-
+                    
         }   
     }
 }
