@@ -18,11 +18,10 @@ namespace Lotto
             lottoSzamok = lottoGeneral();
 
             lottoSzamokKiir(lottoSzamok);
-
-            tombEllenorzes(lottoSzamok);
-
+            Console.WriteLine("Emelkedő számsor rendben:");
             minimumKivalasztasosRendezes(lottoSzamok);
 
+            tombEllenorzes(lottoSzamok);
             Console.ReadKey();
         }
 
@@ -43,24 +42,27 @@ namespace Lotto
                 {
                     keres = lottoSzamok[i];
                 }
-
-                if (logic)
-                {
-                    Console.WriteLine("Duplikálódás");
-                }
-                else
-                {
-                    Console.WriteLine("Ok!");
-                }
             }
+
+            if (logic)
+            {
+                Console.WriteLine(" Duplikálódás!");
+            }
+            else
+            {
+                Console.WriteLine(" Ok!");
+            }   
+
         }
 
         private static void lottoSzamokKiir(int[] lottoSzamok)
         {
             int i;
-            for(i=0; i<lottoSzamok.Length; i++)
+            Console.WriteLine("A generált számok:");
+            for (i=0; i<lottoSzamok.Length; i++)
             {
-                Console.Write(lottoSzamok[i]+", ");
+                Console.WriteLine(lottoSzamok[i]);
+                
             }
         }
 
