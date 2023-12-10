@@ -40,11 +40,9 @@ namespace Lotto
 
             for (i=0; i<5; i++)
             {
-                lotto[i]= rnd.Next(1,90);
-               
+                lotto[i]= rnd.Next(1,90);               
             }
             
-
             return lotto;
         }
 
